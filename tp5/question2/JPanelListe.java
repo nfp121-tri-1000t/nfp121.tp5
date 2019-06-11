@@ -31,6 +31,7 @@ public class JPanelListe extends JPanel implements ActionListener, ItemListener 
 
     private List<String> liste;
     private Map<String, Integer> occurrences;
+    
 
     public JPanelListe(List<String> liste, Map<String, Integer> occurrences) {
         this.liste = liste;

@@ -68,6 +68,13 @@ public class JPanelListe2 extends JPanel implements ActionListener, ItemListener
 
         boutonRechercher.addActionListener(this);
         // à compléter;
+        boutonRechercher.addActionListener(this);
+        boutonRetirer.addActionListener(this);
+        boutonOccurrences.addActionListener(this);
+        ordreCroissant.addItemListener(this);
+        ordreDecroissant.addItemListener(this);
+        
+        saisie.addActionListener(this);//pour la touche ENTER
 
     }
 
@@ -101,18 +108,27 @@ public class JPanelListe2 extends JPanel implements ActionListener, ItemListener
 
     public void itemStateChanged(ItemEvent ie) {
         if (ie.getSource() == ordreCroissant)
-        ;// à compléter
+
+                    Collections.sort(this.liste);
+
         else if (ie.getSource() == ordreDecroissant)
-        ;// à compléter
+            Collections.sort(this.liste, Collections.reverseOrder());
+
 
         texte.setText(liste.toString());
     }
 
     private boolean retirerDeLaListeTousLesElementsCommencantPar(String prefixe) {
-        boolean resultat = false;
-        // à compléter
-        // à compléter
-        // à compléter
+     boolean resultat = false;
+        Iterator<String> iter = this.liste.iterator();
+        while(iter.hasNext()) {
+            String s = iter.next();
+            if (s.startsWith(prefixe)) {
+                iter.remove();
+                resultat = true;
+                this.occurrences.put(s, 0);
+            }
+        }
         return resultat;
     }
 
