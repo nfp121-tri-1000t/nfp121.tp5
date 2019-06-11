@@ -65,6 +65,13 @@ public class JPanelListe extends JPanel implements ActionListener, ItemListener 
 
         boutonRechercher.addActionListener(this);
         // à compléter;
+         boutonRechercher.addActionListener(this);
+        boutonRetirer.addActionListener(this);
+        boutonOccurrences.addActionListener(this);
+        ordreCroissant.addItemListener(this);
+        ordreDecroissant.addItemListener(this);
+        
+        saisie.addActionListener(this);
 
     }
 

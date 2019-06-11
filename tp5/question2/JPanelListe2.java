@@ -74,7 +74,7 @@ public class JPanelListe2 extends JPanel implements ActionListener, ItemListener
         ordreCroissant.addItemListener(this);
         ordreDecroissant.addItemListener(this);
         
-        saisie.addActionListener(this);//pour la touche ENTER
+        saisie.addActionListener(this);
 
     }
 

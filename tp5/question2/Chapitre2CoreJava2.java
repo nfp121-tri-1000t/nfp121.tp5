@@ -17,7 +17,7 @@ public class Chapitre2CoreJava2 {
      * 
      **/
     public static List<String> listeDesMots() {
-        List<String> liste = new LinkedList<String>(); // q2-1
+        List<String> liste = new LinkedList<String>(); 
 
 
         StringTokenizer st = new StringTokenizer(Chapitre2CoreJava2.CHAPITRE2,
