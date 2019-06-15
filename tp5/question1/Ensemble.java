@@ -16,12 +16,12 @@ public class Ensemble<T> extends AbstractSet<T> {
 
     public boolean add(T t) {
             // à compléter pour la question1-1
-        if(this.table.contains(t)){
+            if(this.table.contains(t)){
                 return false;
-            } else {
+            } //else {
                 this.table.add(t);
                 return true;
-            } 
+            //} 
     }
 
     public Ensemble<T> union(Ensemble<? extends T> e) {
